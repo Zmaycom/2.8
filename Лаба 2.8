@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=aMnFe36ficnlT0TOWq_CxWMOKavVQ3Zm6QAgnrdZWwBUP04Qb4WLXcX7s7TO2jdjFH_rtIJ-6v-KcLDCI723yRZWPzyEDhqSTbtpJor1zD11J5Chdk1Mia6Pk2MAJoLptS8N4mBjq8kotqF9JtKrxtv9o1H6Zt3BVxeu1OW-FTVMFKt4uDeDAeLIeTYPYoIkbFw_K8YM1xyIj3TMKFArYiV3Hi_hxPuMs2bS-3g-PigG2_M5Qwm_F6ORZOAn8TCxx4XkbuAW9NOV665GaI5xT6v3g5OXguJxHip-O-dWwsfSfngOKCO5PrYlEJiUDbW51VgAVSB7vIcwqfRazvzrVKKPctLjEyvzTfRbALtWJ6lBBB5smnJN3A6FGMQ45Qi-nAM6RmLxZd2lGRhDXzoV8b0IeGNsMnu6XfUJphRITjWCuqo3Sgrr4sYjjlNJN0t9o0vIzG8ctuXpKA592k167DoO4L4WSYoNJTmSJYfeIgkkDPhbkRKpu9IRzLI6NOZD9YSSBPdtfLxOFAB3l1czrJeze6Ue5JdFl7g_MHpN4IilBPEdzEXRJ4RzZIZmzyzOTjhGoykWiTJbEdABQw-_fLQ9_GyAJRM1xrZbOjL-ZPapmJQlCy43WffWYgrEMSRhulJHc211vnKic9rxw17FRSdpMVrQIEhiZR7Wz5TlWr3s8Np9VgscjEkpvUV-TpRx6t5aujWAOCcyXWQg5nqzdWarzNllANQmYI9sPrG7bQ8naolOFwAmZfxeKzqlU7hsTYkDZeieBYyCFi9PZvRq-B0rwdp4xWNt9anTkaIoaDiCK8u2AVKRfWM-IJ92tZpqOsyfxJ__ZI9sBJ_HJRiE5oh3nwlhhw9EHamXqLNeEpB5bFRZP77qbWo8Nf8TKTQanwfrkS_YSozvIQ190KI3znMbf5kWpvV9ng2EcQQ0LjIvK2Z4-Cu5dfw_8UvAm8ee-WtZcUZPImSML37yEzHw3U8oQaMOIKDXlyXS92q3WvCp1MsVLLFd8aoiM-D5jkZNsEGz5OPhPpuqNsqwvh_7_uuqaOcGc4WWpvrH94dSHX2uBETYyfZpnsSD_6hma8acNEBn0n1eh3AWedyEbIoItR-9NKnP020v5y7RAoGdZIEK7ult7QQjlzC6uPb4l2fs7I9rUZa_ylLbZHlUMuvGcjq6Y-CQRQX4fuzJilW7TAj2onciLCO_URnUJ7iuBjIA8bvsOhZG1D9JwJgjpmC1fQ" nonce="6b9faa5a7256acce46fcf8db759053f0" charset="UTF-8"></script><script>
+            var n=2;
+            var timer;
+          function blackBorder(){
+                for(var i=1; i<4; i++){
+                    document.getElementById("img"+i).style.borderColor="black";
+                }
+            }
+            function changeImage(){
+                    if(n<3){
+                        document.getElementById("mainpicture").src="a"+n+".jpg";
+                        blackBorder();
+                        document.getElementById("img"+n).style.borderColor="blue";
+                        n++;}
+                    else{
+                        document.getElementById("mainpicture").src="a"+n+".jpg";
+                        blackBorder();
+                        document.getElementById("img"+n).style.borderColor="blue";
+                        n=1;}
+                }
+            function showImage(m){
+                document.getElementById("mainpicture").src="a"+m+".jpg";
+                blackBorder()
+                document.getElementById("img"+m).style.borderColor="blue";
+                n=m;
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" onclick="timer=setInterval('changeImage()',1500)" value="Start">
+        <input type="button" onclick="clearInterval(timer)" value="Stop"><br>
+        <img id="mainpicture" border = "3px" onclick="changeImage()" src="a1.jpg" width="440"/><br>
+        <img id="img1" border="3px" onclick="showImage(1)" src="a1.jpg" width="140"/>
+        <img id="img2" border="3px" onclick="showImage(2)" src="a2.jpg" width="140"/>
+        <img id="img3" border="3px" onclick="showImage(3)" src="a3.jpg" width="140"/>
+    </body>
+</html>
